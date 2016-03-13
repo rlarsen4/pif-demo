@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+<head>
+    <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="ratchet/css/ratchet.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <title>pif-demo</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+    <style>
+        /* following three (cascaded) are equivalent to above three meta viewport statements */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+        /* see http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }
+        @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+    <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+    <!-- Recommended location for your JavaScript libraries -->
+    <!-- These library references (below) are just examples to give you the general idea... -->
+    <!-- <script src="lib/mc/hammer.js"></script> -->
+    <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+    <!--
+    * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+    * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+    * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+    * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+    -->
+
+    <script src="cordova.js" id="xdkJScordova_"></script>
+
+    <script src="js/app.js"></script>
+    <!-- for your event code, see README and file comments for details -->
+    <script src="js/init-app.js"></script>
+    <!-- for your init code, see README and file comments for details -->
+    <script src="xdk/init-dev.js"></script>
+    <!-- normalizes device and document ready events, see file for details -->
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="ratchet/js/ratchet.min.js"></script>
+    <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="xdk/ad/rat_subpage.js"></script>
+    <script type="text/javascript" src="js/handlebars.min-latest.js"></script>
+</head>
+
+<body>
+    <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+    <div class="upage" id="mainpage">
+        <div class="upage-outer">
+            <header class="bar bar-nav inner-element uib_w_1 uib-header-relative" data-uib="ratchet/title_bar" data-ver="0" id="pif-header">
+                <div class="widget-container content-area horiz-area wrapping-col left pull-left"></div>
+                <div class="widget-container content-area horiz-area wrapping-col right pull-right"></div>
+                <a href="#" id="backstage-button" class="btn pull-right primary backstage-button">
+                    <span id="backstage-icon" class="fa fa-coffee"></span>
+                </a>
+                <a href="pif-header">
+                    <h1 class="title">Phoenix Improv Festival</h1>
+                </a>
+            </header>
+
+            <nav class="bar bar-tab">
+                <div class="tab-item active schedule-button">
+                    <span class="icon icon-home"></span> 
+                    <span class="tab-label">home</span>
+                </div>
+                <div class="tab-item my-schedule-button">
+                    <span class="icon icon-star-filled"></span>
+                    <span class="tab-label">my schedule</span>
+                </div>
+                <div class="tab-item about-button">
+                    <span class="icon icon-info"></span>
+                    <span class="tab-label">about</span>
+                </div>
+                <div class="tab-item twitter-button">
+                    <span class="icon icon-list"></span>
+                    <span class="tab-label">#pif15</span>
+                </div>
+            </nav>
+
+            <!-- Schedule Page -->
+            <div id="schedule-page" class="upage-content vertical-col" style="top: 0px;">
+                <div class="table-view widget uib_w_8 d-margins" data-uib="ratchet/list_group" data-ver="0">
+                    <li class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0" id="shows-banner">shows</li>
+                    <li id="thursday-shows" class="table-view-cell media uib_w_56 thursday-button navigate-right">
+                        <span>thursday, april 14</span>
+                    </li>
+                    <li id="friday-shows" class="table-view-cell media uib_w_57 friday-button navigate-right">
+                        <span>friday, april 15, 7:00</span>
+                    </li>
+                    <li id="saturday-matinee-shows" class="table-view-cell media uib_w_59 saturday-matinee-button navigate-right">
+                        <span>saturday, april 16, 5:00</span>
+                    </li>
+                    <li id="saturday-shows" class="table-view-cell media uib_w_59 saturday-button navigate-right">
+                        <span>saturday, april 16, 7:00</span>
+                    </li>
+
+                    <li class="table-view-cell widget uib_w_17 table-view-divider" data-uib="ratchet/list_item" data-ver="0" id="workshops">workshops</li>
+                    <div id="workshop-list"></div>
+                    <script id="workshopTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                        <li id="{{workshopId}}" class="table-view-cell widget navigate-right ">
+                            <span class="media-object pull-left icon icon-star fave "></span>
+                            <span class="media-object pull-left icon icon-star-filled unfave deselected"></span>
+                            <div class="workshop-button" >
+                                <span id="wsTitle">{{wsTitle}}</span>
+                            </div>
+                        </li>
+                    {{/each}}
+                    </script>
+                </div>
+            </div>
+
+            <!-- Thursday Detail Page -->
+            <div id="thursday-detail-page" class="upage-content vertical-col left hidden">
+                <a href="" class="btn widget uib_w_65 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <div class="table-view widget uib_w_8 d-margins" data-uib="ratchet/list_group" data-ver="0"> </div>
+                    <li class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0" id="shows-banner">
+                        <span class="showname">thursday, april 14</span>
+                        <p>
+                            <span class="showtime">7:00pm</span><br>
+                            <span class="ticketPrice">$20</span>
+                        </p>
+                    </li>
+                    <div id="thursday-team-list"> </div>
+                    <script id="thursdayTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                        <li id="{{teamId}}" class="table-view-cell widget navigate-right ">
+                            <span class="media-object pull-left icon icon-star fave "></span>
+                            <span class="media-object pull-left icon icon-star-filled unfave deselected"></span>
+                            <div class="thursday-team-button" >
+                                <span id="teamname">{{teamname}}</span>
+                                <span id="showtime" class="pull-right">{{showtime}}</span>
+                                <p id="hometown">{{hometown}}</p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    </script>
+                </div>
+                <li class="table-view-cell widget table-view-divider">
+                    <span>#pif2016!</span>
+                </li>
+            </div>
+
+            <div id="friday-detail-page" class="upage-content vertical-col left hidden">
+                <a href="" class="btn widget uib_w_65 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <div id="fridayTeams" class="table-view widget uib_w_8 d-margins" data-uib="ratchet/list_group" data-ver="0">
+                    <li class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0" id="shows-banner">
+                        <span class="showname">friday, april 15</span>
+                        <p>
+                            <span class="showtime">7:00pm</span><br>
+                            <span class="ticketPrice">$20</span>
+                        </p>
+                    </li>
+                    <div id="friday-team-list"> </div>
+                    <script id="fridayTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                        <li id="{{teamId}}" class="table-view-cell widget navigate-right ">
+                            <span class="media-object pull-left icon icon-star fave "></span>
+                            <span class="media-object pull-left icon icon-star-filled unfave deselected"></span>
+                            <div class="friday-team-button" >
+                                <span id="teamname">{{teamname}}</span>
+                                <span id="showtime" class="pull-right">{{showtime}}</span>
+                                <p id="hometown">{{hometown}}</p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    </script>
+                </div>
+                <li class="table-view-cell widget table-view-divider">
+                    <span>#pif2016!</span>
+                </li>
+            </div>
+
+            <div id="saturday-matinee-detail-page" class="upage-content vertical-col left hidden">
+                <a href="" class="btn widget uib_w_65 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <div id="saturdayMatineeTeams" class="table-view widget uib_w_8 d-margins" data-uib="ratchet/list_group" data-ver="0">
+                    <li class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0" id="shows-banner">
+                        <span class="showname">saturday, april 16</span>
+                        <p>
+                            <span class="showtime">5:00pm</span><br>
+                            <span class="ticketPrice">$20</span>
+                        </p>
+                    </li>
+                    <div id="saturday-matinee-team-list"></div>
+                    <script id="saturdayMatineeTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                        <li id="{{teamId}}" class="table-view-cell widget navigate-right ">
+                            <span class="media-object pull-left icon icon-star fave "></span>
+                            <span class="media-object pull-left icon icon-star-filled unfave deselected"></span>
+                            <div class="saturday-matinee-team-button" >
+                                <span id="teamname">{{teamname}}</span>
+                                <span id="showtime" class="pull-right">{{showtime}}</span>
+                                <p id="hometown">{{hometown}}</p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    </script>
+                </div>
+                <li class="table-view-cell widget table-view-divider">
+                    <span>#pif2016!</span>
+                </li>
+            </div>
+
+            <div id="saturday-detail-page" class="upage-content vertical-col left hidden">
+                <a href="" class="btn widget uib_w_65 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <div id="saturdayTeams" class="table-view widget uib_w_88 d-margins" data-uib="ratchet/list_group" data-ver="0">
+                    <li class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0" id="shows-banner">
+                        <span class="showname">saturday, april 16</span>
+                        <p>
+                            <span class="showtime">7:00pm</span><br>
+                            <span class="ticketPrice">$20</span>
+                        </p>
+                    </li>
+                    <div id="saturday-team-list"></div>
+                    <script id="saturdayTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li id="{{teamId}}" class="table-view-cell widget navigate-right">
+                        <span class="media-object pull-left icon icon-star fave"></span>
+                        <span class="media-object pull-left icon icon-star-filled unfave deselected"></span>
+                        <div class="saturday-team-button" >
+                            <span id="teamname">{{teamname}}</span>
+                            <span id="showtime" class="pull-right">{{showtime}}</span>
+                            <p id="hometown">{{hometown}}</p>
+                        </div>
+                    </li>
+                    {{/each}}
+                    </script>
+                </div>
+                <li class="table-view-cell widget table-view-divider">
+                    <span>#pif2016!</span>
+                </li>
+            </div>
+
+            <!-- Schedule Detail Page -->
+            <div id="schedule-detail-page" class="upage-content vertical-col left hidden content-padded">
+                <a href="" class="btn widget uib_w_91 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <div id="{{teamId}}" class="paragraph-padded">
+                    <div>
+                        <img class="teamId" src="nothing">
+                        <h2 class="teamname">{{teamname}}</h2>
+                        <span class="hometown">{{hometown}}</span>
+                        <span class="showtime pull-right">{{showtime}}</span><br>
+                        <p class="desc">{{desc}}</p>    
+                    </div>
+                </div>
+            </div> 
+
+            <!-- workshop Detail Page    -->
+            <div id="workshop-detail-page" class="upage-content vertical-col left hidden">
+                <a href="" class="btn widget uib_w_90 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <div class="paragraph-padded">
+                    <img src="nothing" alt="nothing" class="workshopId">
+                    <h2 id="wstitle"></h2>
+                    <span id="with">with </span>
+                    <h3 id="instructor"></h3>
+                    <div></div>
+                    <div>
+                        <span id="address"></span>&nbsp;
+                        <p>                        
+                            <span id="room"></span><br>
+                            <span id="date"></span><br>
+                            <span id="time"></span>
+                        </p>
+                    </div>
+                    <h4 >
+                        <span>Cost:</span>
+                        <span id="cost"></span>
+                    </h4>
+                    <span>description: </span>
+                    <p id="description"></p>
+                    <span>instructor bio:</span>
+                    <p id="bio"></p>
+                    <span>requirements:</span>
+                    <p id="requirement"></p>
+                </div>    
+            </div>
+
+            <!-- My Schedule Page -->
+            <div id="my-schedule-page" class="upage-content vertical-col left hidden">
+                <a class="btn widget uib_w_52 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <li id="my-thursday" class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0">
+                <span class="my-thursday-divider">my thursday</span>
+                </li>
+                <div id="my-thursday-team-list" class="">you haven't favorited any events on thursday.</div>
+                <script id="myThursdayTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li id="{{teamId}}" class="table-view-cell widget">
+                        <span class="media-object pull-left icon icon-star fave deselected"></span>
+                        <span class="media-object pull-left icon icon-star-filled unfave "></span>
+                        <div class="thursday-team-button navigate-right">
+                            <span id="teamname">{{teamname}}</span>
+                            <span id="showtime" class="pull-right">{{showtime}}</span>
+                            <p id="hometown">{{hometown}}</p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+                <li id="my-friday" class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0">
+                <span class="my-friday-divider">my friday</span>
+                </li>
+                <div id="my-friday-team-list">you haven't favorited any events on friday</div>
+                <script id="myFridayTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li id="{{teamId}}" class="table-view-cell widget">
+                        <span class="media-object pull-left icon icon-star fave deselected"></span>
+                        <span class="media-object pull-left icon icon-star-filled unfave "></span>
+                        <div class="friday-team-button navigate-right">
+                            <span id="teamname">{{teamname}}</span>
+                            <span id="showtime" class="pull-right">{{showtime}}</span>
+                            <p id="hometown">{{hometown}}</p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+                <li id="my-saturday" class="table-view-cell widget uib_w_10 table-view-divider" data-uib="ratchet/list_item" data-ver="0">
+                <span class="my-saturday-divider">my saturday</span>
+                </li>
+                <div class="no-saturday-faves"></div>
+                <div id="my-saturday-matinee-team-list"></div>
+                <div id="my-saturday-team-list"></div>
+                <div id="my-workshops-list">squeek</div>
+                <script id="mySaturdayMatineeTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li id="{{teamId}}" class="table-view-cell widget">
+                        <span class="media-object pull-left icon icon-star fave deselected"></span>
+                        <span class="media-object pull-left icon icon-star-filled unfave "></span>
+                        <div class="saturday-matinee-team-button navigate-right">
+                            <span id="teamname">{{teamname}}</span>
+                            <span id="showtime" class="pull-right">{{showtime}}</span>
+                            <p id="hometown">{{hometown}}</p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+                <script id="mySaturdayTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                    <li id="{{teamId}}" class="table-view-cell widget">
+                        <span class="media-object pull-left icon icon-star fave deselected"></span>
+                        <span class="media-object pull-left icon icon-star-filled unfave "></span>
+                        <div class="saturday-team-button navigate-right">
+                            <span id="teamname">{{teamname}}</span>
+                            <span id="showtime" class="pull-right">{{showtime}}</span>
+                            <p id="hometown">{{hometown}}</p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+                <script id="myWorkshopsTemplate" type="text/x-handlebars-template">
+                    {{#each this}}
+                        <li id="{{workshopId}}" class="table-view-cell widget navigate-right ">
+                            <span class="media-object pull-left icon icon-star fave deselected"></span>
+                            <span class="media-object pull-left icon icon-star-filled unfave"></span>
+                            <div class="workshop-button">
+                                <span id="wsTitle">{{wsTitle}}</span>
+                            </div>
+                        </li>
+                    {{/each}}
+                </script>
+            </div>
+
+            <!-- About Page -->
+           <div id="about-page" class="upage-content vertical-col left hidden" style="top: 0px;">
+                <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                    <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area wrapping-col left">
+                            <span class="uib_shim"></span>
+                            <a class="btn widget uib_w_25 d-margins btn-default schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                            <div id="about-text" class="paragraph-padded">
+                                <img src="pif-images/2016pifbird.png" alt="pif logo" class="pif-logo">
+                                <h3>History</h3>
+                                <p>
+                                    Since 2002, PIF has focused on bringing together both local and national improv communities on one stage in Phoenix, Arizona. The Phoenix Improv Festival showcases improvisational comedy troupes from the best improv theatres across North America and talent
+                                    from here in Phoenix. From improv games to experimental troupes that perform longer scene-based work, the festival showcases a full variety of improvised theatre. The Phoenix Improv Festival is a multi-day event,
+                                    packed with shows, workshops and networking for improvisers and those who appreciate the art of improvisation. Even if you've never seen improv, this is a great place to try it out!
+                                </p>
+                                <h3>Mission</h3>
+                                <h4>Commitment to Local Artists</h4>
+                                <p>
+                                    The Phoenix Improv Festival is dedicated to fostering the artistry of local performers. In addition to exposing local artists to the best improv from around the country, the festival also hosts workshops for local performers taught by some of the most
+                                    celebrated improv teachers in America. Past festivals have included workshops by directors from the Second City, ImprovOlympic, and the Annoyance Theater. The festival also hosts an Arizona Showcase night, where
+                                    improv troupes from around the valley, including high school and youth groups, get a chance to showcase their talent. Commitment to Excellence - Every year the Phoenix Improv Festival submission committee hand picks
+                                    the most groundbreaking, entertaining, and accomplished performances from dozens of improv troupe submissions. Each year, more troupes apply to become a part of this festival, which speaks not only the increasing
+                                    interest in the Phoenix festival, but to the expanding talent base this art form is commanding. Commitment to Humanity - In addition to being an exciting and unique brand of theater, improvisation also promotes
+                                    values and useful skills that can help people in the workplace, in their relationships, and in the community. The cornerstones of improvisational theater are active listening and teamwork. Other skills taught by
+                                    improv, such as public speaking, confrontation of fears, confidence, and spontaneity, can be extremely advantageous in many areas of life. In fact, several corporations hire improvisation instructors to enhance
+                                    productivity and workplace morale. Relationship counselors have also been known to use improvisation as a method of teaching skills such as listening, agreeing, and achieving common goals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="twitter-page" class="upage-content hidden vertical-col" style="top: 0px;">
+                <a class="btn widget uib_w_55 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                
+                <a class="twitter-timeline" href="https://twitter.com/hashtag/IHeartPIF" data-widget-id="708802700788371456">#IHeartPIF Tweets</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+
+            <!-- Performer's Lounge -->                       
+            <div id="sign-in-page" class="upage-content hidden vertical-col" style="top: 0px">
+                <header class="bar bar-nav">
+                    <a class="icon icon-close pull-right" href="#sign-in"></a>
+                    <h1 class="title">sign in</h1>
+                </header>
+                    <p class="content-padded">sign in to backstage pass.</p>
+                    <p id="incorrect-password" class="hidden">Password incorrect!</p>
+                    <div id="backstage-form">
+                        <input id="backstage-text" type="text" placeholder="password">
+                        <button id="sign-in-button" class="btn btn-positive btn-block">submit</button>
+                   </div>
+            </div>
+            
+            <div id="backstage-page" class="upage-content hidden vertical-col" style="top: 0px;">
+                <div id="sign-out-button" class="btn btn-default">sign out</div>
+                <div class="paragraph-padded">
+                <div class="content-padded">
+                    <h2>hotel</h2>
+                    <h3>Holiday Inn Express</h3>
+                    <div>620 N 6th Street, Phoenix</div>
+                    <div>(602) 452-2020</div>
+                </div>
+                <br>
+                <div class="content-padded">
+                    <h2>Theatre</h2>
+                    <h3>Herberger Theater – Stage West</h3>
+                    <div>222 E Monroe Street, Phoenix </div>
+                    <p>The Herberger’s Stage West is a beautiful 320 seat theater, for out of town performers, located less than a 10 minute walk from the hotel (map). You can walk through the Arizona Center just southwest of the hotel to save a bit of distance.</p>
+                    <p>Your PIF2016 Badge will be given to you upon arrival either at the volunteer orientation, upon arrival or at the Theater, and will be necessary for admittance to the theater and party events throughout the weekend. Please wear your badge when you encounter theater ushers. It is how you will get into the theater and backstage.</p>
+                    <p>When arriving at the theater for tech, your performance and volunteer shifts, you will need to enter at the northwest security entrance, located at Van Buren and 2nd Street, and check in using your name, troupe name or staff affiliation. When entering through security, you must also exit through security.</p>
+                    <p>It is important that all staff also use this entrance before the house opens, no entry through the lobby will be available until we officially open for audience.</p>
+                    <p>We are in Stage West — stay to the right when walking in.</p>
+                    <p>To see a show you can enter through the lobby after the house opens — there are also doors from the backstage area into the theater. Seating for badge holders is located on the second and third floor balconies. Depending on ticket sales, you may need to stand or give up your seat to ticket holders.</p>
+                </div>
+                <div class="content-padded">
+                    <h2>Group Photo</h2>
+                    <h3>Friday, April 15th at 6 p.m. PROMPTLY</h3>
+                    <p>We hope you can join us on the Herberger Stage West for the #PIF2016 group photo.</p>
+                    <p>The photo will go quick and be finished by 6:15 p.m.</p>
+                </div>
+                <div class="content-padded">
+                    <h2>PIF Late Night @ Space 55</h2>
+                    <div>(subject to change</div>
+                    <p>636 E. Pierce Street</p>
+                    <p>Space 55 is located only a few steps away from the hotel. (map)</p>
+                    <h3>10:30 p.m.</h3>
+                    <h4>The Revival PIF Special</h4>
+                    <p>– A special off mainstage performance featuring who knows who</p>
+                    <h3>12:30 a.m.</h3>
+                    <h4>IF 6 FOR 6 JAM</h4>
+                    <p>(longform improv jam) – hosted by a local group – starts around 12:30 a.m. Join us for the 6 FOR 6 JAM where groups of six will be picked at random from willing participants and perform 6 minute sets.</p>
+                    <p>This is a BYOB event, feel free to bring refreshments of any kind (out of town guests can put orders in with their den moms).</p>
+                </div>
+                <div class="content-padded">
+                    <h2>Afterparty</h2>
+                    <h3>Saturday</h3>
+                    <p>details</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

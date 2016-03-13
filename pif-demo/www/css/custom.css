@@ -1,0 +1,88 @@
+.show-name {
+	font-weight: bold;
+	padding: 20px;
+	width: 70%;
+	display: inline
+}
+
+.favorite {
+/*	position: absolute;
+	right: 20px;
+	text-align: right;
+	color: yellow;
+	display: inline;
+	font-size: larger;*/
+}
+
+.location {
+	font-size: 85%;
+	font-variant: small-caps;
+	padding: 10px;
+}
+
+.show-description {
+	padding: 10px;
+}
+
+.logged-in {
+	background-color: #1a689a;
+	color: white;
+	border:0px;
+}
+
+.fave, .unfave {
+	color: #1a689a;
+}
+
+
+.deselected {
+	display: none;
+}
+
+li {
+	list-style: none;
+}
+
+img.teamId {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.workshopId {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.pif-logo {
+	width: 100%;
+}
+
+.table-view-divider {
+	font-weight: bold;
+	background-color: #fbb781;
+	color: #fff;
+}
+.table-view-cell::after {
+	color: #fff;
+
+}
+.pifMainFont {
+	color: #fff;
+	color: #fbdf39;
+}
+
+.pifAccentFont {
+}
+
+.active {
+	color: #1a689a;
+}
+
+.paragraph-padded {
+	color:#444;
+	max-width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}

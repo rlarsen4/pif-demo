@@ -1,0 +1,619 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"inline",
+				"inline"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"satu",
+				"saturday"
+			],
+			[
+				"thus",
+				"thursday-01"
+			],
+			[
+				"vis",
+				"visiting"
+			],
+			[
+				"m",
+				"merch-page"
+			],
+			[
+				"se",
+				"schedule-page"
+			],
+			[
+				"sche",
+				"schedule-page"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"font",
+				"font-variant"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"re",
+				"removeClass"
+			],
+			[
+				"cli",
+				"clicked"
+			],
+			[
+				"fot",
+				"font-variant"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"c",
+				"cursive"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ff",
+				"FFFF19"
+			],
+			[
+				"f",
+				"FFFF19"
+			],
+			[
+				"ex",
+				"expandOne"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"epx",
+				"expand1"
+			],
+			[
+				"play",
+				"playClicked"
+			],
+			[
+				"border-bo",
+				"border-bottom"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"title",
+				"titleLeft"
+			],
+			[
+				"ho",
+				"host1"
+			],
+			[
+				"webd",
+				"webdev"
+			],
+			[
+				"web",
+				"webdev"
+			],
+			[
+				"page",
+				"pageNames"
+			],
+			[
+				"pagem",
+				"pageNames"
+			],
+			[
+				"pa",
+				"pageNames"
+			],
+			[
+				"pag",
+				"pageNames"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"inclue",
+				"include_once"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"supe",
+				"supersonic"
+			],
+			[
+				"bord",
+				"border-bottom-right-radius"
+			],
+			[
+				"border-bott",
+				"border-bottom-left-radius"
+			],
+			[
+				"tex",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 390.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: add pa",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"Package Control: lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Co",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rick/pif-demo/pif-demo/www/js/index_user_scripts.js",
+		"/home/rick/pif-demo/pif-demo/www/css/custom.css",
+		"/home/rick/pif-demo/handlebars-version/data.json",
+		"/home/rick/pif-demo/pif-demo/www/index.html",
+		"/home/rick/pif-demo/pif-demo/www/xdk/init-dev.js",
+		"/home/rick/pif-demo/pif-demo/www/js/app.js",
+		"/home/rick/.config/sublime-text-3/Packages/User/HipsterIpsum.sublime-settings",
+		"/home/rick/.config/sublime-text-3/Packages/HipsterIpsum/Hipster Ipsum.sublime-settings",
+		"/home/rick/.config/sublime-text-3/Packages/HipsterIpsum/README.mdown",
+		"/home/rick/pif-demo/pif-demo/www/ratchet/js/ratchet.js",
+		"/home/rick/pif-demo/pif-demo-01/www/index.html",
+		"/home/rick/pif-demo/pif-demo-01/pif-demo-01.xdk",
+		"/home/rick/apollo12/autm-rb-master/index.html",
+		"/home/rick/apollo12/autm-rb-master/_includes/title.html",
+		"/home/rick/apollo12/autm-rb-master/_posts/2014-11-30-testtest.md",
+		"/home/rick/apollo12/autm-rb-master/_posts/2014-11-30-introducing-autm-rb.md",
+		"/home/rick/apollo12/autm-rb-master/_posts/2015-07-28-skateboards.md",
+		"/home/rick/Documents/jose602/josebook.adoc",
+		"/home/rick/apollo12/autm-rb-master/resume.html",
+		"/home/rick/apollo12/autm-rb-master/projects.html",
+		"/home/rick/apollo12/autm-rb-master/_includes/footer.html",
+		"/home/rick/wednesdaymorningsurfreport/wednesdaymorningsurfreport/index.html",
+		"/home/rick/apollo12/autm-rb-master/_config.yml",
+		"/home/rick/wednesdaymorningsurfreport/wednesdaymorningsurfreport/_site/index.html",
+		"/home/rick/wednesdaymorningsurfreport/_site/css/wednesdaymorning.css",
+		"/home/rick/wednesdaymorningsurfreport/_site/css/grayscale.css",
+		"/home/rick/wednesdaymorningsurfreport/_site/index.html",
+		"/home/rick/wednesdaymorningsurfreport/_site/about/index.html",
+		"/home/rick/Desktop/set list",
+		"/home/rick/godot/godot_quiz/godotquiz.css",
+		"/home/rick/godot/godot_quiz/index.html",
+		"/home/rick/godot/godot_quiz/godotquiz.html",
+		"/home/rick/www/scripts/perhamusviewmodel.js",
+		"/home/rick/godot quiz/godotquiz.css",
+		"/home/rick/godot quiz/main.js",
+		"/home/rick/godot quiz/godotquiz.html",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/media.md",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_config.yml",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_site/index.html",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_layouts/page.html",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_layouts/post.html",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_layouts/default.html",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/calendar.md",
+		"/home/rick/www/index.php",
+		"/home/rick/www/home.php",
+		"/home/rick/www/footer.php",
+		"/home/rick/public/thericklarsenshow.org/sampleprojects.html",
+		"/home/rick/public/thericklarsenshow.org/index.html",
+		"/home/rick/amysite/test.html",
+		"/home/rick/amysite/index.html",
+		"/home/rick/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/rick/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/rick/.config/sublime-text-3/Packages/AdvancedNewFile/AdvancedNewFile.sublime-settings",
+		"/home/rick/.config/sublime-text-3/Packages/AdvancedNewFile/Default (Linux).sublime-keymap",
+		"/home/rick/.config/sublime-text-3/Packages/Emmet/Default (Linux).sublime-keymap",
+		"/home/rick/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+		"/home/rick/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_posts/2015-05-14-welcome-to-jekyll.markdown",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_sass/_layout.scss",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_includes/header.html",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_site/about/index.html",
+		"/home/rick/calendar-project/styles/styles.css",
+		"/home/rick/calendar-project/html/index.html",
+		"/home/rick/Documents/sketch show/emo kneivel.txt",
+		"/home/rick/Documents/sketch show/sketch ideas",
+		"/home/rick/node-school/learning-node/module-08/package.json",
+		"/home/rick/node-school/learning-node/module-08/check-site.js",
+		"/home/rick/node-school/learning-node/module-08/test/test.check-site.js",
+		"/home/rick/Documents/sketch show/Scissor Museum",
+		"/home/rick/calendar-project/scripts/main.js",
+		"/home/rick/jekyllrickdotorg/ricklarsenshow/_includes/head.html",
+		"/home/rick/Documents/improv-blog/festivalreasons.txt",
+		"/home/rick/Documents/design3",
+		"/home/rick/Documents/design2",
+		"/home/rick/node-school/learning-node/module-07/check-site.js",
+		"/home/rick/node-school/learning-node/module-07/package.json",
+		"/home/rick/node-school/learning-node/module-07/test/test.check-site.js",
+		"/home/rick/node-school/learning-node/module-06/check-site.js",
+		"/home/rick/node-school/learning-node/module-06/package.json",
+		"/home/rick/node-school/learning-node/module-06/test/test.check-site.js",
+		"/home/rick/node-school/learning-node/module-05/package.json",
+		"/home/rick/node-school/learning-node/module-05/test/test.check-site.js",
+		"/home/rick/node-school/learning-node/module-05/check-site.js",
+		"/home/rick/Documents/tabletest.html",
+		"/home/vhosts/host2/public/css/supersonic.css",
+		"/home/rick/Documents/table.css",
+		"/home/rick/Documents/main.js",
+		"/home/vhosts/host2/public/scripts/main.js",
+		"/home/vhosts/host2/public/supersonic.html",
+		"/home/vhosts/host1/public/header.php",
+		"/home/vhosts/host1/public/nav.php",
+		"/home/rick/Documents/react notes.txt",
+		"/home/vhosts/host1/public/webdev/samples.php",
+		"/home/vhosts/host1/public/webdev/covrlettr.css",
+		"/home/vhosts/host1/public/webdev/covrlettr.php",
+		"/home/vhosts/host1/public/scripts/main.js",
+		"/home/vhosts/host1/public/webdev/resume.php",
+		"/home/vhosts/host1/public/css/larsenstyles.css",
+		"/home/ddf/ddf/distribution/console-branding/pom.xml",
+		"/home/rick/Documents/jobs/employmentHistory.txt",
+		"/home/ddf/ddf/distribution/pom.xml",
+		"/home/ddf/ddf/distribution/console-branding/src/main/resources/org/apache/karaf/branding/branding.properties",
+		"/home/vhosts/host1/public/altnav.php",
+		"/home/vhosts/host1/public/index.php",
+		"/home/vhosts/host1/public/webdev/contact.php",
+		"/home/vhosts/host1/public/comedy/bio.php",
+		"/home/vhosts/host1/public/comedy/blog.php",
+		"/home/vhosts/host1/public/comedy/calendar.php",
+		"/home/vhosts/host1/public/comedy/socialmedia.php",
+		"/home/vhosts/host1/public/comedy/writing.php",
+		"/home/vhosts/host1/public/footer.php",
+		"/home/rick/public/thericklarsenshow.org/sitemap.txt",
+		"/home/vhosts/host1/public/larsenresume.php",
+		"/home/vhosts/host1/public/socialmedia.php",
+		"/home/vhosts/host1/index.php",
+		"/home/vhosts/host1/public/turkey.php",
+		"/home/vhosts/host1/public/asdf.php",
+		"/var/www/html/index.php",
+		"/home/rick/public/thericklarsenshow.org/larsenresume.html",
+		"/home/rick/Documents/ricklarsenshow/index.php",
+		"/home/rick/Documents/shanefiles/index.php",
+		"/var/www/html/services.php",
+		"/var/www/html/header.php",
+		"/var/www/html/nav.php",
+		"/var/www/html/home.php",
+		"/home/rick/Documents/amysite/index.html",
+		"/home/rick/Documents/covrlettr.html",
+		"/home/rick/Documents/covrlettr.css"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"ManContents.adoc",
+			"josebook.adoc",
+			"",
+			"tabletest.html",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"fergie",
+			"Fergie",
+			">\n",
+			"schedule-button",
+			"schedule-page",
+			"occupy",
+			"uib_w_1",
+			"uib_w_13",
+			"uib_2_13",
+			"fergie",
+			"Fergie",
+			"uib_w_",
+			"uib_w_3 ",
+			"Gra",
+			"Guide",
+			"span",
+			"thursday",
+			"ratchet.js",
+			"DDF",
+			"center",
+			"[]",
+			"[role=\"center\"]",
+			"jpg",
+			">>>",
+			"=\"/\">",
+			"Greenberg",
+			"000",
+			"222",
+			"fff",
+			"url",
+			"listen",
+			"padd",
+			"color",
+			"row",
+			"download",
+			"Download",
+			"download",
+			"one",
+			" ",
+			"a",
+			"span",
+			"25",
+			"50px",
+			";\n",
+			"werld",
+			"div",
+			"boot",
+			"<div class=\"col-xs-6 col-md-3\">\n    <a href=\"#\" class=\"thumbnail\">\n      <img data-src=\"holder.js/100%x180\" alt=\"...\">\n    </a>\n  </div>",
+			">\n",
+			"span",
+			"zeronte",
+			"vhosts"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"p",
+			"saturday",
+			"p",
+			"saturday",
+			"friday",
+			"right",
+			"[role=\"center\"]",
+			"jpg[]",
+			"<<<",
+			"listen",
+			"Listen",
+			"listen",
+			"*"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "data.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 287.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
