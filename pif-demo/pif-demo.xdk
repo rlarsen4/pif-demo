@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "d6d2253a-6621-4c35-a334-e19bfafbbab0",
-      "lastModifiedDate": 1454161439527,
+      "lastModifiedDate": 1458412747876,
       "creationDate": 1454160389968
     },
     "XDK-app-designer": "true",
@@ -123,8 +123,23 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "pif-images/2016pifbird-icon1.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "pif-images/2016pifsplash-android.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          }
+        ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "cordovaCLIVersion_": "5.1.1",
@@ -144,7 +159,7 @@
         },
         "isActive_": true,
         "appName_": "pif-demo",
-        "appID_": "xdk.intel.blank.ad.template",
+        "appID_": "QQXX46BPV8.com.pif-demo",
         "appAccess_": {
           "mode": "legacy",
           "network": [
@@ -153,16 +168,32 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "pif-images/2016pifbird-icon-iphone.png",
+            "height": 60,
+            "width": 60
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon1.png",
+            "height": 72,
+            "width": 72
+          }
+        ],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "iosProvs_": [],
+        "iosProvs_": [
+          {
+            "relPath": "pifdemodev.mobileprovision",
+            "type": "adhoc"
+          }
+        ],
         "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "14",
         "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a Cordova mobile web app using the App Designer UI editor."
+        "appAuthor_": "rick larsen",
+        "appDescription_": "demo app for PIF schedule"
       },
       "Windows8": {
         "platform_": "windows8",
