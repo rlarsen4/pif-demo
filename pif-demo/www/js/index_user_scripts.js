@@ -807,7 +807,6 @@
     });
     $(document).on("click", ".saturday-matinee-team-button", function(evt)
     {
-        console.log("happening");
         var selectedShow = $(evt.currentTarget).parent().attr("id");
 
         $(".teamname").text(saturdayMatineeTeams[selectedShow].teamname);

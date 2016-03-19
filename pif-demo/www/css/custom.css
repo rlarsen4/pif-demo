@@ -1,3 +1,6 @@
+div {
+    cursor: pointer;
+}
 .show-name {
 	font-weight: bold;
 	padding: 20px;
