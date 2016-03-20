@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "d6d2253a-6621-4c35-a334-e19bfafbbab0",
-      "lastModifiedDate": 1458412747876,
+      "lastModifiedDate": 1458423967018,
       "creationDate": 1454160389968
     },
     "XDK-app-designer": "true",
@@ -83,7 +83,7 @@
         },
         "isActive_": true,
         "appName_": "pif-demo",
-        "appID_": "xdk.intel.blank.ad.template.crosswalk",
+        "appID_": "PIF2016",
         "appAccess_": {
           "mode": "legacy",
           "network": [
@@ -113,8 +113,8 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "pif-demo",
-        "appID_": "xdk.intel.blank.ad.template",
+        "appName_": "Phoenix Improv Festival 2016",
+        "appID_": "com.phoeniximprovfestival.pif2016",
         "appAccess_": {
           "mode": "legacy",
           "network": [
