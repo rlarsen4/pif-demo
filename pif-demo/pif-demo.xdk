@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "d6d2253a-6621-4c35-a334-e19bfafbbab0",
-      "lastModifiedDate": 1458423967018,
+      "lastModifiedDate": 1459713640707,
       "creationDate": 1454160389968
     },
     "XDK-app-designer": "true",
@@ -125,19 +125,86 @@
         },
         "icons_": [
           {
-            "relPath": "pif-images/2016pifbird-icon1.png",
+            "relPath": "pif-images/2016pifbird-icon-72.png",
             "density": "hdpi",
             "height": 72,
             "width": 72
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-96.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-48.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-36.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
           }
         ],
         "splashes_": [
           {
-            "relPath": "pif-images/2016pifsplash-android.png",
+            "relPath": "pif-images/2016pifbird-android-320-426.png",
             "density": "ldpi",
             "height": 426,
             "width": 320,
             "orientation": "portrait"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-320-470.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-480-640.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-720-960.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-426-320.png",
+            "density": "ldpi",
+            "height": 320,
+            "width": 426,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-470-320.png",
+            "density": "mdpi",
+            "height": 320,
+            "width": 470,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-640-480.png",
+            "density": "hdpi",
+            "height": 480,
+            "width": 640,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "pif-images/2016pifbird-android-960-720.png",
+            "density": "xhdpi",
+            "height": 720,
+            "width": 960,
+            "orientation": "landscape"
           }
         ],
         "addlPermissions_": "",
@@ -178,6 +245,31 @@
             "relPath": "pif-images/2016pifbird-icon1.png",
             "height": 72,
             "width": 72
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-iphone-29.png",
+            "height": 29,
+            "width": 29
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-iphone-58.png",
+            "height": 58,
+            "width": 58
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-iphone-87.png",
+            "height": 87,
+            "width": 87
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-iphone-120.png",
+            "height": 120,
+            "width": 120
+          },
+          {
+            "relPath": "pif-images/2016pifbird-icon-iphone-180.png",
+            "height": 180,
+            "width": 180
           }
         ],
         "splashes_": [],
