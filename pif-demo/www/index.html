@@ -267,14 +267,15 @@
 
             <!-- Schedule Detail Page -->
             <div id="schedule-detail-page" class="upage-content vertical-col left hidden content-padded">
-                <a href="" class="btn widget uib_w_91 btn-default d-margins schedule-button navigate-left" data-uib="ratchet/button" data-ver="0">schedule</a>
+                <a href="" class="btn widget uib_w_91 btn-default d-margins navigate-left" data-uib="ratchet/button" id="schedule-detail-back-button" data-ver="0">placeholder</a>
                 <div id="{{teamId}}" class="paragraph-padded">
                     <div>
-                        <img class="teamId" src="nothing">
+                        <img class="teamId" src="">
                         <h2 class="teamname">{{teamname}}</h2>
                         <span class="hometown">{{hometown}}</span>
                         <span class="showtime pull-right">{{showtime}}</span><br>
-                        <p class="desc">{{desc}}</p>    
+                        <p class="desc">{{desc}}</p>
+                        <div class="bottom-shim"></div>    
                     </div>
                 </div>
             </div> 
@@ -306,7 +307,8 @@
                     <p id="bio"></p>
                     <span>requirements:</span>
                     <p id="requirement"></p>
-                </div>    
+                </div>
+                <div class="bottom-shim"></div>    
             </div>
 
             <!-- My Schedule Page -->
@@ -352,7 +354,7 @@
                 <div class="no-saturday-faves"></div>
                 <div id="my-saturday-matinee-team-list"></div>
                 <div id="my-saturday-team-list"></div>
-                <div id="my-workshops-list">squeek</div>
+                <div id="my-workshops-list"></div>
                 <script id="mySaturdayMatineeTemplate" type="text/x-handlebars-template">
                     {{#each this}}
                     <li id="{{teamId}}" class="table-view-cell widget">
@@ -386,6 +388,7 @@
                             <span class="media-object pull-left icon icon-star-filled unfave"></span>
                             <div class="workshop-button">
                                 <span id="wsTitle">{{wsTitle}}</span>
+                                <span id="time" class="pull-right">{{time}}</span>
                             </div>
                         </li>
                     {{/each}}

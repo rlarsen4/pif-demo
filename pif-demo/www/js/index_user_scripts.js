@@ -135,6 +135,12 @@
                 "showtime": "8:20pm", 
                 "faved": "false"
             },
+            "team051": {
+                "teamId": "team051",
+                "teamname": "intermission",
+                "showtime": "8:40pm",
+                "fave": "false"
+            },
             "team06": {
                 "teamId": "team06",
                 "teamname": "robot destroyers from planet earth",
@@ -692,6 +698,14 @@
             }
         }
 
+        $("li#team051").removeClass("navigate-right");
+        $("li#team051").removeClass("button");
+        $("li#team051").removeClass("thursday-team-button");
+        $("li#team051 .fave").addClass("deselected");
+
+        $("li#team051").addClass("table-view-divider");
+
+
         activate_subpage("#thursday-detail-page");
     });
 
@@ -786,8 +800,13 @@
         $("img.teamId").attr("alt","pif-images/"+thursdayTeams[selectedShow].teamname);
         $(".showtime").text(thursdayTeams[selectedShow].showtime);
         $(".desc").text(thursdayTeams[selectedShow].desc);
+        $("#schedule-detail-back-button").removeClass("friday-button");
+        $("#schedule-detail-back-button").removeClass("saturday-matinee-button");
+        $("#schedule-detail-back-button").removeClass("saturday-button");
+        $("#schedule-detail-back-button").text("thursday");
 
         activate_subpage("#schedule-detail-page");
+        $("#schedule-detail-back-button").addClass("thursday-button");
 
     });
 
@@ -801,8 +820,13 @@
         $("img.teamId").attr("alt","pif-images/"+fridayTeams[selectedShow].teamname);
         $(".showtime").text(fridayTeams[selectedShow].showtime);
         $(".desc").text(fridayTeams[selectedShow].desc);
-
+        $("#schedule-detail-back-button").removeClass("thursday-button");
+        $("#schedule-detail-back-button").removeClass("saturday-matinee-button");
+        $("#schedule-detail-back-button").removeClass("saturday-button");
+        $("#schedule-detail-back-button").text("friday");
+        
         activate_subpage("#schedule-detail-page");
+        $("#schedule-detail-back-button").addClass("friday-button");
 
     });
     $(document).on("click", ".saturday-matinee-team-button", function(evt)
@@ -815,6 +839,11 @@
         $("img.teamId").attr("alt","pif-images/"+saturdayMatineeTeams[selectedShow].teamname);
         $(".showtime").text(saturdayMatineeTeams[selectedShow].showtime);
         $(".desc").text(saturdayMatineeTeams[selectedShow].desc);
+        $("#schedule-detail-back-button").removeClass("thursday-button");
+        $("#schedule-detail-back-button").removeClass("friday-button");
+        $("#schedule-detail-back-button").removeClass("saturday-button");
+        $("#schedule-detail-back-button").addClass("saturday-matinee-button");
+        $("#schedule-detail-back-button").text("saturday matinee");
 
         activate_subpage("#schedule-detail-page");
 
@@ -829,6 +858,11 @@
         $("img.teamId").attr("alt","pif-images/"+saturdayTeams[selectedShow].teamname);
         $(".showtime").text(saturdayTeams[selectedShow].showtime);
         $(".desc").text(saturdayTeams[selectedShow].desc);
+        $("#schedule-detail-back-button").removeClass("thursday-button");
+        $("#schedule-detail-back-button").removeClass("friday-button");
+        $("#schedule-detail-back-button").removeClass("saturday-matinee-button");
+        $("#schedule-detail-back-button").addClass("saturday-button");
+        $("#schedule-detail-back-button").text("saturday");
 
         activate_subpage("#schedule-detail-page");
 

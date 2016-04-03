@@ -89,3 +89,12 @@ img.pif-logo {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+button {
+	background-color: #1a689a;
+	color: #fff;
+}
+
+.bottom-shim {
+	height: 80px;
+}
