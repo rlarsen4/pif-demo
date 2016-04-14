@@ -126,11 +126,11 @@
             },
             "team05": {
                 "teamId": "team05",
-                "teamname": "the displacers",
+                "teamname": "robot destroyers from planet earth",
                 "image": "http://placecage/com/g/100/100",
                 "hometown": "phoenix",
                 "website": "http://purple.com",
-                "desc": "Torch Theatre based troupe The Displacers performs the longform format Harold. They are accompanied by Chad Michael Lawson.",
+                "desc": "Robot Destroyers From Planet Earth: We are a longform improv power duo bringing comedy to the sad people of our home planet of Earth. We enjoy delivering high stakes status play, fun characters, and dynamic visuals to our shows. We have thrilled and chilled audiences in multiple venues in Arizona and Mexico. We hope to thrill and chill audiences for you sometime in the near yet frightening future!",
                 "showdate": "thursday",
                 "showtime": "8:20pm", 
                 "faved": "false"
@@ -139,18 +139,15 @@
                 "teamId": "team051",
                 "teamname": "intermission",
                 "showtime": "8:40pm",
-                "fave": "false"
+                "faved": "false"
             },
             "team06": {
                 "teamId": "team06",
-                "teamname": "robot destroyers from planet earth",
-                "image": "http://placecage/com/g/100/100",
-                "hometown": "phoenix",
-                "website": "http://purple.com",
-                "desc": "Robot Destroyers From Planet Earth: We are a longform improv power duo bringing comedy to the sad people of our home planet of Earth. We enjoy delivering high stakes status play, fun characters, and dynamic visuals to our shows. We have thrilled and chilled audiences in multiple venues in Arizona and Mexico. We hope to thrill and chill audiences for you sometime in the near yet frightening future!",
+                "teamname": "laura ingalls",
                 "showdate": "thursday",
-                "showtime": "9:10pm", 
-                "faved": "false"
+                "showtime": "9:10pm",
+                "hometown": "Phoenix",
+                "desc": "Laura Ingalls consists of Marisol Chavez and Sara Palmer. One hailing from South Dakota and the other falling in love with Little House on the Prairie as a child, Laura Ingalls seemed a perfect fit. These two friends (and comedy life partners) have been performing and touring together with an all lady troupe known as For a Good Time Call for the past two years. From this, their relationship has grown as well as their depth of familiarity and comfort on stage. After several road trips, exploring new cities and performing on different stages, the two became keenly interested in creating a show that focused on singular characters and their relationship and how that could grow throughout a twenty-five minute show. In this new project, a sense of people watching comes to life. The audience becomes a fly on the wall to a scenario based on their suggestion."
             },
             "team07": {
                 "teamId": "team07",
@@ -240,6 +237,12 @@
                 "desc": "DUMMY is Colleen Doyle and Jason Shotts doing a two-person improvised show. They started performing together at the iO Theater in Chicago back in 2008. Since then, DUMMY has performed for audiences in London, Rome, Copenhagen, Los Angeles, San Francisco, New York, San Diego, Austin, Houston, Washington DC, Cleveland, Detroit, Minneapolis, St. Louis, Atlanta, Traverse City and Gainesville. (DUMMY proudly won the iO Chicago’s Del Award for “Best Non-Harold Improv Show” in 2013 and 2014.) “For years T.J. Jagodowski and Dave Pasquesi have reigned as Chicago’s must-see two-person improv team. After catching a recent set from Colleen Doyle and Jason Shotts at iO Theater, I think it’s safe to say there’s room on that improv pedestal for yet another pair of performers. ” – Nina Metz, Chicago Tribune",
                 "showdate": "friday",
                 "showtime": "8:30pm", 
+                "faved": "false"
+            },
+            "team141": {
+                "teamId": "team141",
+                "teamname": "intermission",
+                "showtime": "9:00pm",
                 "faved": "false"
             },
             "team15": {
@@ -357,6 +360,12 @@
                 "showtime": "8:30pm", 
                 "faved": "false"
             },
+            "team241": {
+                "teamId": "team241",
+                "teamname": "intermission",
+                "showtime": "9:00pm",
+                "faved": "false"
+            },
             "team25": {
                 "teamId": "team25",
                 "teamname": "bush league",
@@ -393,7 +402,18 @@
         };
 
 
-    var myEvents = [];;
+    var myEvents = [];
+
+    var previousPage = "schedule-button";
+    var twoStepsBack = "schedule-button";
+
+    var setBackButton = function(currPage) {
+        $("#backButton").removeClass(twoStepsBack);
+        $("#backButton").addClass(previousPage);
+        twoStepsBack = previousPage;
+        previousPage = currPage;
+
+    };
 
     $(document).ready(function(){
         var savedEvents = window.localStorage.getItem("myEvents");
@@ -509,6 +529,7 @@
      /* button  #about */
     $(document).on("click", ".about-button", function(evt)
     {
+        setBackButton("about-button");
 
         $(".tab-item").removeClass("active");
         $(".about-button").addClass("active");
@@ -519,6 +540,8 @@
     /* button  Schedule */
     $(document).on("click", ".schedule-button", function(evt)
     {
+        setBackButton("schedule-button");
+
         $(".tab-item").removeClass("active");
         $(".schedule-button").addClass("active");
 
@@ -551,7 +574,8 @@
         /* button  #twitter */
     $(document).on("click", ".twitter-button", function(evt)
     {
-         /*global activate_subpage */
+        setBackButton("twitter-button");
+
         $(".tab-item").removeClass("active");
         $(".twitter-button").addClass("active");
 
@@ -561,6 +585,8 @@
         /* button  my-schedule */
     $(document).on("click", ".my-schedule-button", function(evt)
     {
+        setBackButton("my-schedule-button");
+
         $(".tab-item").removeClass("active");
         $(".my-schedule-button").addClass("active");
 
@@ -675,6 +701,8 @@
     
     $(document).on("click", ".thursday-button", function(evt)
     {
+        setBackButton("thursday-button");
+        
         var thursdayTemplate = Handlebars.compile($('#thursdayTemplate').html());
         $('#thursday-team-list').html(thursdayTemplate(thursdayTeams));
 
@@ -711,6 +739,8 @@
 
     $(document).on("click", ".friday-button", function(evt)
     {
+        setBackButton("friday-button");
+
         var fridayTemplate = Handlebars.compile($('#fridayTemplate').html());
         $('#friday-team-list').html(fridayTemplate(fridayTeams));
 
@@ -733,11 +763,20 @@
             }
         }
 
+        $("li#team141").removeClass("navigate-right");
+        $("li#team141").removeClass("button");
+        $("li#team141").removeClass("thursday-team-button");
+        $("li#team141 .fave").addClass("deselected");
+
+        $("li#team141").addClass("table-view-divider");
+
         activate_subpage("#friday-detail-page");
     });
     
     $(document).on("click", ".saturday-matinee-button", function(evt)
     {
+        setBackButton("saturday-matinee-button");
+
         var saturdayMatineeTemplate = Handlebars.compile($('#saturdayMatineeTemplate').html());
         $('#saturday-matinee-team-list').html(saturdayMatineeTemplate(saturdayMatineeTeams));
         
@@ -765,6 +804,8 @@
 
     $(document).on("click", ".saturday-button", function(evt)
     {
+        setBackButton("saturday-button");
+
         var saturdayTemplate = Handlebars.compile($('#saturdayTemplate').html());
         $('#saturday-team-list').html(saturdayTemplate(saturdayTeams));
         
@@ -787,11 +828,20 @@
             }
         }
 
+        $("li#team241").removeClass("navigate-right");
+        $("li#team241").removeClass("button");
+        $("li#team241").removeClass("thursday-team-button");
+        $("li#team241 .fave").addClass("deselected");
+
+        $("li#team241").addClass("table-view-divider");
+
         activate_subpage("#saturday-detail-page");
     });
 
     $(document).on("click", ".thursday-team-button", function(evt)
     {
+        setBackButton("schedule-button");
+
         var selectedShow = $(evt.currentTarget).parent().attr("id");
 
         $(".teamname").text(thursdayTeams[selectedShow].teamname);
@@ -812,6 +862,8 @@
 
     $(document).on("click", ".friday-team-button", function(evt)
     {
+        setBackButton("schedule-button");
+
         var selectedShow = $(evt.currentTarget).parent().attr("id");
 
         $(".teamname").text(fridayTeams[selectedShow].teamname);
@@ -831,6 +883,8 @@
     });
     $(document).on("click", ".saturday-matinee-team-button", function(evt)
     {
+        setBackButton("schedule-button");
+
         var selectedShow = $(evt.currentTarget).parent().attr("id");
 
         $(".teamname").text(saturdayMatineeTeams[selectedShow].teamname);
